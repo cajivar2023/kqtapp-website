@@ -11,6 +11,44 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- n8n Chat CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos personalizados para n8n Chat -->
+    <style>
+      :root {
+        --chat--color-primary: #3498db;
+        --chat--color-primary-shade-50: #2980b9;
+        --chat--color-primary-shade-100: #2471a3;
+        --chat--color-secondary: #2c3e50;
+        --chat--window--width: 400px;
+        --chat--window--height: 600px;
+        --chat--message--user--background: #3498db;
+        --chat--toggle--background: #3498db;
+        --chat--toggle--hover--background: #2980b9;
+        --chat--toggle--active--background: #2471a3;
+      }
+
+      /* Estilos para el chat en modo fullscreen dentro del contenedor */
+      .chat-fullscreen-container {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 30px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .chat-fullscreen-container {
+          height: 450px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -78,16 +116,8 @@
             de Romelio:
           </p>
 
-          <!-- Contenedor del Chat de N8N -->
-          <div class="chat-container">
-            <iframe
-              src="https://n8n-container.brazilsouth.azurecontainer.io/webhook/e104e40e-6134-4825-a6f0-8a646d882662/chat"
-              title="Chat Romelio"
-              allow="microphone"
-              scrolling="no"
-            >
-            </iframe>
-          </div>
+          <!-- Contenedor para el chat en modo fullscreen -->
+          <div class="chat-fullscreen-container" id="romelio-chat"></div>
 
           <div class="project-features">
             <h2>Características principales</h2>
@@ -151,5 +181,30 @@
     </footer>
 
     <script src="../js/main.js"></script>
+
+    <!-- Script de n8n Chat -->
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      // Inicializar el chat de n8n
+      createChat({
+        webhookUrl:
+          "https://n8n-container.brazilsouth.azurecontainer.io/webhook/e104e40e-6134-4825-a6f0-8a646d882662/chat",
+        target: "#romelio-chat",
+        mode: "fullscreen",
+        initialMessages: [
+          "👋 ¡Hola! Soy Romelio, tu asistente virtual.",
+          "¿En qué puedo ayudarte hoy?",
+        ],
+        i18n: {
+          en: {
+            title: "Asistente Romelio",
+            subtitle: "Estoy aquí para responder tus preguntas.",
+            inputPlaceholder: "Escribe tu pregunta...",
+            getStarted: "Nueva Conversación",
+          },
+        },
+      });
+    </script>
   </body>
 </html>
