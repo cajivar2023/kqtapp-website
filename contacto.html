@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios - KQT App</title>
+    <title>Contacto - KQT App</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -18,11 +24,15 @@
           </button>
           <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html" class="active">Servicios</a></li>
-            <li>
-              <a href="https://n8n.kqtapp.com" target="_blank">N8N Workflows</a>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li class="has-submenu">
+              <a href="proyectos.html">Proyectos</a>
+              <ul class="submenu">
+                <li><a href="proyectos/romelio.html">Romelio</a></li>
+                <li><a href="https://n8n.kqtapp.com" target="_blank">N8N Workflows</a></li>
+              </ul>
             </li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -31,7 +41,7 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Contactenos</h1>
+          <h1>Contáctenos</h1>
           <p>Próximamente: Información detallada sobre nuestros contactos.</p>
         </div>
       </section>
@@ -39,6 +49,26 @@
 
     <footer class="footer">
       <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>KQT<span>App</span></h3>
+            <p>Soluciones tecnológicas avanzadas</p>
+          </div>
+          <div class="footer-links">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contacto</h4>
+            <p>Email: info@kqtapp.com</p>
+            <p>Teléfono: +XX XXX XXX XXX</p>
+          </div>
+        </div>
         <div class="footer-bottom">
           <p>&copy; 2025 KQT App. Todos los derechos reservados.</p>
         </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios - KQT App</title>
+    <title>Proyectos - KQT App</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +24,9 @@
           </button>
           <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html" class="active">Servicios</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
             <li class="has-submenu">
-              <a href="proyectos.html">Proyectos</a>
+              <a href="proyectos.html" class="active">Proyectos</a>
               <ul class="submenu">
                 <li><a href="proyectos/romelio.html">Romelio</a></li>
                 <li><a href="https://n8n.kqtapp.com" target="_blank">N8N Workflows</a></li>
@@ -41,8 +41,44 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Nuestros Servicios</h1>
-          <p>Próximamente: Información detallada sobre nuestros servicios.</p>
+          <h1>Nuestros Proyectos</h1>
+          <p>Descubre nuestras soluciones y casos de éxito</p>
+        </div>
+      </section>
+
+      <section class="featured-services">
+        <div class="container">
+          <div class="services-grid">
+            <!-- Proyecto Romelio -->
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icono o imagen representativa -->
+              </div>
+              <h3>Romelio</h3>
+              <p>
+                Chat inteligente con integración a n8n para automatización de procesos
+                de atención al cliente y gestión de consultas.
+              </p>
+              <a href="proyectos/romelio.html" class="btn btn-secondary">Ver proyecto</a>
+            </div>
+
+            <!-- Proyecto N8N Workflows -->
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icono o imagen representativa -->
+              </div>
+              <h3>N8N Workflows</h3>
+              <p>
+                Plataforma de automatización para crear flujos de trabajo eficientes
+                sin necesidad de código. Integración con múltiples servicios.
+              </p>
+              <a href="https://n8n.kqtapp.com" target="_blank" class="btn btn-secondary">
+                Acceder a la plataforma
+              </a>
+            </div>
+
+            <!-- Puedes agregar más proyectos aquí -->
+          </div>
         </div>
       </section>
     </main>
